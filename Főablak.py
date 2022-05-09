@@ -2,6 +2,11 @@ from tkinter import *
 from tkinter import messagebox
 import math
 
+#Főablak
+foablak = Tk()
+foablak.title("Síkidomok területe és kerülete ")
+foablak.minsize(width = 300, height=100)
+
 menusor=Frame(foablak)
 menusor.pack(side=TOP, fill=X)
 menu1=Menubutton(menusor, text='Téglatest', underline=0)
@@ -43,12 +48,6 @@ menu8=Menubutton(menusor, text='Kör', underline=0)
 menu8.pack(side=LEFT)
 kör=Menu(menu8)
 menu8.config(menu=kör)
-
-
-#Főablak
-foablak = Tk()
-foablak.title("Síkidomok területe és kerülete ")
-foablak.minsize(width = 300, height=100)
 
 
 foablak.mainloop()
