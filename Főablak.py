@@ -1,6 +1,13 @@
 from tkinter import *
 from tkinter import messagebox
 import math
+import trapez
+
+def trapezT():
+    trapez.terulet()
+
+def trapezK():
+    trapez.kerulet()
 
 #Főablak
 foablak = Tk()
@@ -86,8 +93,10 @@ menu2.config(menu=háromszög)
 
 menu3=Menubutton(menusor, text='Trapéz', underline=0)
 menu3.pack(side=LEFT)
-trapéz=Menu(menu3)
-menu3.config(menu=trapéz)
+trapezm=Menu(menu3)
+trapezm.add_command(label='Terület', command=trapezT, underline=0)
+trapezm.add_command(label='Kerület', command=trapezK, underline=0)
+menu3.config(menu=trapezm)
 
 menu4=Menubutton(menusor, text='Paraleleogramma', underline=0)
 menu4.pack(side=LEFT)
