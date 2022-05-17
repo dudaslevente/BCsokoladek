@@ -1,9 +1,9 @@
 from tkinter import *
 
 
-def trapezK ():
+def kerulet ():
     def szamitas ():
-        if aE.get() == '' or bE.get() == '' or cE.get() == '' or dE.get() == '' or mE.get() == '':
+        if aE.get() == '' or bE.get() == '' or cE.get() == '' or dE.get() == '':
             eredmenyE.delete (0, END)
             eredmenyE.insert (0, 'Adjon meg adatokat.' )
         else:
@@ -11,13 +11,12 @@ def trapezK ():
             b = float(bE.get())
             c = float(cE.get())
             d = float(dE.get())
-            m = float(mE.get())
 
-            if a <= 0 or b <= 0 or c <= 0 or d <= 0 or m <= 0:
+            if a <= 0 or b <= 0 or c <= 0 or d <= 0:
                 eredmenyE.delete (0, END)
                 eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
             else:
-                A = 2 * (a*b + b*c + a*c)
+                A = round (a + b + c + d, 2)
                 eredmenyE.delete (0, END)
                 eredmenyE.insert (0, str(A))
 
@@ -33,53 +32,107 @@ def trapezK ():
         bE.delete (0, END)
         cE.delete (0, END)
         dE.delete (0, END)
-        mE.delete (0, END)
         eredmenyE.delete (0, END)
 
-    trapez = Tk ()
+    trapezker = Tk ()
 
-    trapez.title ('Trapéz')
-    trapez.minsize (width=300, height=100)
+    trapezker.title ('Trapéz kerülete')
+    trapezker.minsize (width=300, height=100)
 
-    aL = Label (trapez, text='a:')
+    aL = Label (trapezker, text='a:')
     aL.grid (column=1, row=1, sticky=E)
-    aE = Entry (trapez, width=27)
+    aE = Entry (trapezker, width=27)
     aE.grid (column=2, row=1)
 
-    bL = Label (trapez, text='b:')
+    bL = Label (trapezker, text='b:')
     bL.grid (column=1, row=2, sticky=E)
-    bE = Entry (trapez, width=27)
+    bE = Entry (trapezker, width=27)
     bE.grid (column=2, row=2)
 
-    cL = Label (trapez, text='c:')
+    cL = Label (trapezker, text='c:')
     cL.grid (column=1, row=3, sticky=E)
-    cE = Entry (trapez, width=27)
+    cE = Entry (trapezker, width=27)
     cE.grid (column=2, row=3)
 
-    dL = Label (trapez, text='d:')
+    dL = Label (trapezker, text='d:')
     dL.grid (column=1, row=4, sticky=E)
-    dE = Entry (trapez, width=27)
+    dE = Entry (trapezker, width=27)
     dE.grid (column=2, row=4)
 
-    '''mL = Label (trapez, text='b:')
-    mL.grid (column=1, row=5, sticky=E)
-    mE = Entry (trapez, width=27)
-    mE.grid (column=2, row=5)'''
-
-    eredmenyL = Label (trapez, text='Eredmény:')
+    eredmenyL = Label (trapezker, text='Kerület:')
     eredmenyL.grid (column=1, row=6, sticky=E)
-    eredmenyE = Entry (trapez, width=27)
+    eredmenyE = Entry (trapezker, width=27)
     eredmenyE.grid (column=2, row=6)
 
-    szamitasB = Button (trapez, text='Számítás', command=hülyee)
+    szamitasB = Button (trapezker, text='Számítás', command=hülyee)
     szamitasB.grid (column=2, row=7, sticky=W)
 
-    kilepB = Button (trapez, text='Kilépés', command=trapez.destroy)
+    kilepB = Button (trapezker, text='Kilépés', command=trapezker.destroy)
     kilepB.grid (column=2, row=7, sticky=E)
 
-    törlesB = Button (trapez, text='Törlés', command=törles)
+    törlesB = Button (trapezker, text='Törlés', command=törles)
     törlesB.grid (column=1, row=7)
 
-    trapez.mainloop ()
+    trapezker.mainloop ()
 
-trapezK ()
+
+
+def terulet ():
+    def szamitas ():
+        if aE.get() == '' or maE.get() == '':
+            eredmenyE.delete (0, END)
+            eredmenyE.insert (0, 'Adjon meg adatokat.' )
+        else:
+            a = float(aE.get())
+            ma = float(bmaE.get())
+
+            if a <= 0 or ma <= 0:
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+            else:
+                A = round (a * ma, 2)
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, str(A))
+
+    def hülyee ():
+        try:
+            szamitas ()
+        except:
+            eredmenyE.delete (0, END)
+            eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+
+    def törles ():
+        aE.delete (0, END)
+        maE.delete (0, END)
+        eredmenyE.delete (0, END)
+
+    trapezter = Tk ()
+
+    trapezter.title ('Trapéz területe')
+    trapezter.minsize (width=300, height=100)
+
+    aL = Label (trapezter, text='a:')
+    aL.grid (column=1, row=1, sticky=E)
+    aE = Entry (trapezter, width=27)
+    aE.grid (column=2, row=1)
+
+    ma = Label (trapezter, text='m:')
+    ma.grid (column=1, row=2, sticky=E)
+    ma = Entry (trapezter, width=27)
+    ma.grid (column=2, row=2)
+
+    eredmenyL = Label (trapezter, text='Terület:')
+    eredmenyL.grid (column=1, row=6, sticky=E)
+    eredmenyE = Entry (trapezter, width=27)
+    eredmenyE.grid (column=2, row=6)
+
+    szamitasB = Button (trapezter, text='Számítás', command=hülyee)
+    szamitasB.grid (column=2, row=7, sticky=W)
+
+    kilepB = Button (trapezter, text='Kilépés', command=trapezter.destroy)
+    kilepB.grid (column=2, row=7, sticky=E)
+
+    törlesB = Button (trapezter, text='Törlés', command=törles)
+    törlesB.grid (column=1, row=7)
+
+    trapezter.mainloop ()
