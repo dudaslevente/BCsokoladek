@@ -1,8 +1,9 @@
 from tkinter import *
 from tkinter import messagebox
 import math
-
+import trapez
 import teglalap
+import rombusz
 
 def trapezT():
     trapez.terulet()
@@ -15,6 +16,12 @@ def teglalapT():
 
 def teglalapK():
     teglalap.kerulet()
+
+def rombuszT():
+    rombusz.terulet()
+
+def rombuszK():
+    rombusz.kerulet()
 
 #Főablak
 foablak = Tk()
@@ -57,6 +64,8 @@ menu5.config(menu=deltoid)
 menu6=Menubutton(menusor, text='Rombusz', underline=0)
 menu6.pack(side=LEFT)
 rombusz=Menu(menu6)
+trapezm.add_command(label='Terület', command=rombuszT, underline=0)
+trapezm.add_command(label='Kerület', command=rombuszK, underline=0)
 menu6.config(menu=rombusz)
 
 menu7=Menubutton(menusor, text='Négyzet', underline=0)
