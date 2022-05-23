@@ -106,5 +106,3 @@ kor.add_command(label="Terület", command = terulet, underline=0)
 menu2.config(menu = kor)
 
 """
-
-foablak.mainloop()
