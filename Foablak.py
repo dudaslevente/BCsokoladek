@@ -4,6 +4,33 @@ import math
 import trapez
 import teglalap
 import rombusz
+import Négyzet
+import Kör
+
+#Névjegy
+def nevjegy():
+    abl2 = Toplevel(foablak)
+    uz2 = Message(abl2, text="Készítette: Dudás Levente\nCsóka András\nBartek Áron", width=300)
+    gomb2 = Button(abl2, text="Kilép", command=abl2.destroy)
+    uz2.pack()
+    gomb2.pack()
+    abl2.mainloop()
+
+
+
+def négyzetT():
+    Négyzet.terulet()
+
+def négyzetK():
+    Négyzet.kerulet()
+
+
+def körT():
+    Kör.terulet()
+
+def körK():
+    Kör.kerulet()
+
 
 def trapezT():
     trapez.terulet()
@@ -29,8 +56,14 @@ foablak.title("Síkidomok területe és kerülete ")
 foablak.minsize(width = 400, height=100)
 
 
-menusor=Frame(foablak)
+menusor = Frame(foablak)
 menusor.pack(side=TOP, fill=X)
+menu = Menubutton(menusor, text="Fájl", underline=0)
+menu.pack(side=LEFT)
+fajl=Menu(menu)
+fajl.add_command(label="Névjegy", command = nevjegy, underline=0)
+fajl.add_command(label="Kilépés", command=foablak.destroy, underline=0)
+menu.config(menu = fajl)
 
 menu1=Menubutton(menusor, text='Téglalap', underline=0)
 menu1.pack(side=LEFT)
@@ -68,14 +101,18 @@ trapezm.add_command(label='Terület', command=rombuszT, underline=0)
 trapezm.add_command(label='Kerület', command=rombuszK, underline=0)
 menu6.config(menu=rombusz)
 
-menu7=Menubutton(menusor, text='Négyzet', underline=0)
+menu7=Menubutton(menusor, text="Négyzet", underline=0)
 menu7.pack(side=LEFT)
 négyzet=Menu(menu7)
+négyzet.add_command(label="Kerület", command = négyzetK, underline=0)
+négyzet.add_command(label="Terület", command = négyzetT, underline=0)
 menu7.config(menu=négyzet)
 
 menu8=Menubutton(menusor, text='Kör', underline=0)
 menu8.pack(side=LEFT)
 kör=Menu(menu8)
+kör.add_command(label="Kerület", command = körK, underline=0)
+kör.add_command(label="Terület", command = körT, underline=0)
 menu8.config(menu=kör)
 
 foablak.mainloop()
