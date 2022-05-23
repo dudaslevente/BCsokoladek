@@ -123,4 +123,3 @@ def terulet ():
 
     paralelogrammater.mainloop ()
 
-kerulet()
