@@ -122,5 +122,3 @@ def terulet ():
     törlesB.grid (column=1, row=7)
 
     paralelogrammater.mainloop ()
-
-kerulet()

@@ -1,9 +1,43 @@
 from tkinter import *
 from tkinter import messagebox
 import math
+<<<<<<< Updated upstream
 
 import teglalap
 
+=======
+import trapez
+import teglalap
+import rombusz
+import Négyzet
+import Kör
+import paralelogramma
+
+#Névjegy
+def nevjegy():
+    abl2 = Toplevel(foablak)
+    uz2 = Message(abl2, text="Készítette: Dudás Levente\nCsóka András\nBartek Áron", width=300)
+    gomb2 = Button(abl2, text="Kilép", command=abl2.destroy)
+    uz2.pack()
+    gomb2.pack()
+    abl2.mainloop()
+
+
+
+def négyzetT():
+    Négyzet.terulet()
+
+def négyzetK():
+    Négyzet.kerulet()
+
+
+def körT():
+    Kör.terulet()
+
+def körK():
+    Kör.kerulet()
+
+>>>>>>> Stashed changes
 def trapezT():
     trapez.terulet()
 
@@ -16,6 +50,21 @@ def teglalapT():
 def teglalapK():
     teglalap.kerulet()
 
+<<<<<<< Updated upstream
+=======
+def rombuszT():
+    rombusz.terulet()
+
+def rombuszK():
+    rombusz.kerulet()
+
+def paralelogrammaT():
+    paralelogramma.terulet()
+
+def paralelogrammaK():
+    paralelogramma.kerulet()
+
+>>>>>>> Stashed changes
 #Főablak
 foablak = Tk()
 foablak.title("Síkidomok területe és kerülete ")
@@ -46,8 +95,10 @@ menu3.config(menu=trapezm)
 
 menu4=Menubutton(menusor, text='Paraleleogramma', underline=0)
 menu4.pack(side=LEFT)
-paralelogramma=Menu(menu4)
-menu4.config(menu=paralelogramma)
+paralelogrammam=Menu(menu4)
+paralelogrammam.add_command(label='Terület', command=paralelogrammaT, underline=0)
+paralelogrammam.add_command(label='Kerület', command=paralelogrammaK, underline=0)
+menu4.config(menu=paralelogrammam)
 
 menu5=Menubutton(menusor, text='Deltoid', underline=0)
 menu5.pack(side=LEFT)
@@ -56,8 +107,15 @@ menu5.config(menu=deltoid)
 
 menu6=Menubutton(menusor, text='Rombusz', underline=0)
 menu6.pack(side=LEFT)
+<<<<<<< Updated upstream
 rombusz=Menu(menu6)
 menu6.config(menu=rombusz)
+=======
+rombuszm=Menu(menu6)
+rombuszm.add_command(label='Terület', command=rombuszT, underline=0)
+rombuszm.add_command(label='Kerület', command=rombuszK, underline=0)
+menu6.config(menu=rombuszm)
+>>>>>>> Stashed changes
 
 menu7=Menubutton(menusor, text='Négyzet', underline=0)
 menu7.pack(side=LEFT)
