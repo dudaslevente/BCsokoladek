@@ -1,11 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import math
-<<<<<<< Updated upstream
 
-import teglalap
-
-=======
 import trapez
 import teglalap
 import rombusz
@@ -50,8 +46,6 @@ def teglalapT():
 def teglalapK():
     teglalap.kerulet()
 
-<<<<<<< Updated upstream
-=======
 def rombuszT():
     rombusz.terulet()
 
@@ -107,10 +101,6 @@ menu5.config(menu=deltoid)
 
 menu6=Menubutton(menusor, text='Rombusz', underline=0)
 menu6.pack(side=LEFT)
-<<<<<<< Updated upstream
-rombusz=Menu(menu6)
-menu6.config(menu=rombusz)
-=======
 rombuszm=Menu(menu6)
 rombuszm.add_command(label='Terület', command=rombuszT, underline=0)
 rombuszm.add_command(label='Kerület', command=rombuszK, underline=0)

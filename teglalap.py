@@ -13,9 +13,9 @@ def kerulet ():
                 eredmenyE.delete (0, END)
                 eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
             else:
-                A = round (2*(a+b))
+                K = round (2*(a+b))
                 eredmenyE.delete (0, END)
-                eredmenyE.insert (0, str(A))
+                eredmenyE.insert (0, str(K))
 
     def hülyee ():
         try:
@@ -31,7 +31,7 @@ def kerulet ():
 
     teglalapker = Tk ()
 
-    teglalapker.title ('Trapéz kerülete')
+    teglalapker.title ('Téglalap kerülete')
     teglalapker.minsize (width=300, height=100)
 
     aL = Label (teglalapker, text='a:')
@@ -74,9 +74,9 @@ def terulet ():
                 eredmenyE.delete (0, END)
                 eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
             else:
-                A = round (a*b)
+                T = round (a*b)
                 eredmenyE.delete (0, END)
-                eredmenyE.insert (0, str(A))
+                eredmenyE.insert (0, str(T))
 
     def hülyee ():
         try:
@@ -87,11 +87,12 @@ def terulet ():
 
     def törles ():
         aE.delete (0, END)
+        bE.delete (0, END)
         eredmenyE.delete (0, END)
 
     teglalapter = Tk ()
 
-    teglalapter.title ('Trapéz területe')
+    teglalapter.title ('Téglalap területe')
     teglalapter.minsize (width=300, height=100)
 
     aL = Label (teglalapter, text='a:')
@@ -99,10 +100,10 @@ def terulet ():
     aE = Entry (teglalapter, width=27)
     aE.grid (column=2, row=1)
 
-    ma = Label (teglalapter, text='m:')
-    ma.grid (column=1, row=2, sticky=E)
-    ma = Entry (teglalapter, width=27)
-    ma.grid (column=2, row=2)
+    bL = Label (teglalapker, text='b:')
+    bL.grid (column=1, row=2, sticky=E)
+    bE = Entry (teglalapker, width=27)
+    bE.grid (column=2, row=2)
 
     eredmenyL = Label (teglalapter, text='Terület:')
     eredmenyL.grid (column=1, row=6, sticky=E)
