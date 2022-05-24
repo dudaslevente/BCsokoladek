@@ -8,6 +8,7 @@ import rombusz
 import Négyzet
 import Kör
 import paralelogramma
+import deltoid
 
 #Névjegy
 def nevjegy():
@@ -26,13 +27,17 @@ def négyzetT():
 def négyzetK():
     Négyzet.kerulet()
 
-
 def körT():
     Kör.terulet()
 
 def körK():
     Kör.kerulet()
 
+def deltoidT():
+    deltoid.terulet()
+
+def deltoidK():
+    deltoid.kerulet()
 
 def trapezT():
     trapez.terulet()
@@ -96,8 +101,10 @@ menu4.config(menu=paralelogrammam)
 
 menu5=Menubutton(menusor, text='Deltoid', underline=0)
 menu5.pack(side=LEFT)
-deltoid=Menu(menu5)
-menu5.config(menu=deltoid)
+deltoidm=Menu(menu5)
+deltoidm.add_command(label='Terület', command=deltoidT, underline=0)
+deltoidm.add_command(label='Kerület', command=deltoidK, underline=0)
+menu5.config(menu=deltoidm)
 
 menu6=Menubutton(menusor, text='Rombusz', underline=0)
 menu6.pack(side=LEFT)

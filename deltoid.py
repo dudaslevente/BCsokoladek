@@ -99,7 +99,7 @@ def terulet ():
 
     eL = Label (deltoidter, text='e:')
     eL.grid (column=1, row=1, sticky=E)
-    eE = Entry (deltoidterr, width=27)
+    eE = Entry (deltoidter, width=27)
     eE.grid (column=2, row=1)
 
     fL = Label (deltoidter, text='f:')
@@ -115,7 +115,7 @@ def terulet ():
     szamitasB = Button (deltoidter, text='Számítás', command=hülyee)
     szamitasB.grid (column=2, row=7, sticky=W)
 
-    kilepB = Button (deltoidterr, text='Kilépés', command=deltoidter.destroy)
+    kilepB = Button (deltoidter, text='Kilépés', command=deltoidter.destroy)
     kilepB.grid (column=2, row=7, sticky=E)
 
     törlesB = Button (deltoidter, text='Törlés', command=törles)
