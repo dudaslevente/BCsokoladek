@@ -36,11 +36,15 @@ def kerulet():
    #szoveg2.grid(row=2)
    #szoveg3.grid(row=3)
     szoveg4.grid(row=5)
-    gomb1.grid(row=4, column=2)
-    mezo1.grid(row=1, column=2)
+    gomb1.grid(row=4, column=1)
+    mezo1.grid(row=1, column=1)
    #mezo2.grid(row=2, column=2)
    #mezo3.grid(row=3, column=2)
-    mezo4.grid(row=5, column=2)
+    mezo4.grid(row=5, column=1)
+    w = Canvas(abl3, width=250, height=200)
+    w.create_rectangle(60, 60, 180, 180, outline = 'black')
+    w.grid()
+
     abl3.mainloop()
 
     #Kerület vége
@@ -108,3 +112,4 @@ menu7.config(menu = teglatest)
 
 
 foablak.mainloop()'''
+
