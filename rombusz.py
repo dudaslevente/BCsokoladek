@@ -7,7 +7,6 @@ def kerulet ():
             eredmenyE.insert (0, 'Adjon meg adatokat.' )
         else:
             a = float(aE.get())
-            
 
             if a <= 0:
                 eredmenyE.delete (0, END)

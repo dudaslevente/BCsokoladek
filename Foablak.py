@@ -33,7 +33,7 @@ def körT():
 def körK():
     Kör.kerulet()
 
->>>>>>> Stashed changes
+
 def trapezT():
     trapez.terulet()
 
@@ -58,7 +58,7 @@ def paralelogrammaT():
 def paralelogrammaK():
     paralelogramma.kerulet()
 
->>>>>>> Stashed changes
+
 #Főablak
 foablak = Tk()
 foablak.title("Síkidomok területe és kerülete ")
@@ -105,7 +105,7 @@ rombuszm=Menu(menu6)
 rombuszm.add_command(label='Terület', command=rombuszT, underline=0)
 rombuszm.add_command(label='Kerület', command=rombuszK, underline=0)
 menu6.config(menu=rombuszm)
->>>>>>> Stashed changes
+
 
 menu7=Menubutton(menusor, text='Négyzet', underline=0)
 menu7.pack(side=LEFT)
