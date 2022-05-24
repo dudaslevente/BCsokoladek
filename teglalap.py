@@ -100,9 +100,9 @@ def terulet ():
     aE = Entry (teglalapter, width=27)
     aE.grid (column=2, row=1)
 
-    bL = Label (teglalapker, text='b:')
+    bL = Label (teglalapter, text='b:')
     bL.grid (column=1, row=2, sticky=E)
-    bE = Entry (teglalapker, width=27)
+    bE = Entry (teglalapter, width=27)
     bE.grid (column=2, row=2)
 
     eredmenyL = Label (teglalapter, text='Terület:')
