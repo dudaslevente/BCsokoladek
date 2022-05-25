@@ -42,6 +42,9 @@ def kerulet():
     mezo2.grid(row=2, column=2)
     mezo3.grid(row=3, column=2)
     mezo4.grid(row=5, column=2)
+    c = Canvas(abl3, width=120, height=115, bg="white")
+    c.create_polygon(63, 40, 50, 90, 80, 90, outline = "black", width=4, fill="white")  
+    c.grid(row=1, column=4, rowspan=6)
     abl3.mainloop()
 
     #Kerület vége
@@ -82,6 +85,9 @@ def terulet():
     mezo2.grid(row=2, column=2)
     #mezo3.grid(row=3, column=2)
     mezo4.grid(row=5, column=2)
+    c = Canvas(abl3, width=120, height=115, bg="white")
+    c.create_polygon(63, 40, 50, 90, 80, 90, outline = "black", width=4, fill="white")  
+    c.grid(row=1, column=4, rowspan=6)
     abl3.mainloop()
 
 
