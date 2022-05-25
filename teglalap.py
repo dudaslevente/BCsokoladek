@@ -58,6 +58,11 @@ def kerulet ():
     törlesB = Button (teglalapker, text='Törlés', command=törles)
     törlesB.grid (column=1, row=7)
 
+    my_canvas=Canvas(teglalapker, width=300, height=200)
+    my_canvas.grid(column=10, row=8)
+
+    my_canvas.create_rectangle(50, 150,250,50, fill="gray")
+
     teglalapker.mainloop ()
 
 
@@ -100,9 +105,9 @@ def terulet ():
     aE = Entry (teglalapter, width=27)
     aE.grid (column=2, row=1)
 
-    bL = Label (teglalapker, text='b:')
+    bL = Label (teglalapter, text='b:')
     bL.grid (column=1, row=2, sticky=E)
-    bE = Entry (teglalapker, width=27)
+    bE = Entry (teglalapter, width=27)
     bE.grid (column=2, row=2)
 
     eredmenyL = Label (teglalapter, text='Terület:')
@@ -118,5 +123,11 @@ def terulet ():
 
     törlesB = Button (teglalapter, text='Törlés', command=törles)
     törlesB.grid (column=1, row=7)
+
+    my_canvas=Canvas(teglalapter, width=300, height=200)
+    my_canvas.grid(column=10, row=8)
+
+    my_canvas.create_rectangle(50, 150,250,50, fill="gray")
+
 
     teglalapter.mainloop ()
