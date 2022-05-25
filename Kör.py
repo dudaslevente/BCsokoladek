@@ -41,6 +41,16 @@ def kerulet():
    #mezo2.grid(row=2, column=2)
    #mezo3.grid(row=3, column=2)
     mezo4.grid(row=5, column=2)
+    canvas = Canvas(abl3, width = 115, height = 100, bg = "white")
+    canvas.grid(column = 4, row = 1, rowspan = 7)
+    def create_circle(x, y, r, canvasName):
+        x0 = x - r
+        y0 = y - r
+        x1 = x + r
+        y1 = y + r
+        return canvasName.create_oval(x0, y0, x1, y1)
+
+    create_circle(50, 50, 40, canvas)
     abl3.mainloop()
 
     #Kerület vége
@@ -81,6 +91,17 @@ def terulet():
    #mezo2.grid(row=2, column=2)
    #mezo3.grid(row=3, column=2)
     mezo4.grid(row=5, column=2)
+    canvas = Canvas(abl3, width = 115, height = 100, bg = "white")
+    canvas.grid(column = 4, row = 1, rowspan = 7)
+    def create_circle(x, y, r, canvasName):
+        x0 = x - r
+        y0 = y - r
+        x1 = x + r
+        y1 = y + r
+        return canvasName.create_oval(x0, y0, x1, y1)
+
+    create_circle(50, 50, 40, canvas)
+
     abl3.mainloop()
 
 
