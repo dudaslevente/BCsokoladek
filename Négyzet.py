@@ -41,9 +41,9 @@ def kerulet():
    #mezo2.grid(row=2, column=2)
    #mezo3.grid(row=3, column=2)
     mezo4.grid(row=5, column=1)
-    w = Canvas(abl3, width=250, height=200)
-    w.create_rectangle(60, 60, 180, 180, outline = 'black')
-    w.grid()
+    w = Canvas(abl3, width=130, height=100, bg="white")
+    w.create_rectangle(30, 30, 90, 90, outline = 'black', width=5)
+    w.grid(row=1, column=4, rowspan=5)
 
     abl3.mainloop()
 
@@ -85,6 +85,9 @@ def terulet():
    #mezo2.grid(row=2, column=2)
    #mezo3.grid(row=3, column=2)
     mezo4.grid(row=5, column=2)
+    w = Canvas(abl3, width=130, height=100, bg="white")
+    w.create_rectangle(30, 30, 90, 90, outline = 'black', width=5)
+    w.grid(row=1, column=4, rowspan=5)
     abl3.mainloop()
 
 
